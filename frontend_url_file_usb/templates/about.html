@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - SecureGuard Cyber Security</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about SecureGuard, the leading provider of AI-powered threat detection for URLs, files, and USB devices. Our mission, team, and expertise.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 90%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 10%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding: 120px 0 80px;
+        }
+
+        .hero-about h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffffff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-about p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .team-card {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 255, 136, 0.2);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .team-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .team-card p {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .cta {
+            text-align: center;
+            background: rgba(30, 41, 59, 0.8);
+            padding: 80px 40px;
+            border-radius: 30px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 15px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-about h1, .section-title {
+                font-size: 2.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">🛡️ SecureGuard</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li><a href="/about">About</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+
+        <section class="hero-about">
+            <h1>About SecureGuard</h1>
+            <p>Founded in 2022, we're pioneers in AI-driven cyber threat detection, protecting enterprises worldwide from evolving digital risks with cutting-edge technology.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Empowering Digital Safety</h3>
+                    <p>At SecureGuard, we believe cybersecurity should be proactive, intelligent, and accessible. Our platform uses advanced machine learning to detect threats in real-time, preventing breaches before they occur.</p>
+                    <p>With a team of 50+ cybersecurity experts and partnerships with global threat intelligence networks, we deliver unmatched protection for URLs, files, and USB devices.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🔒</div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">10M+</span>
+                    <p>Threats Blocked</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <p>Enterprise Clients</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <p>Detection Rate</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <p>Global Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💻</div>
+                    <h4>Dr. Alex Chen</h4>
+                    <p>CEO & Founder<br>PhD in Cybersecurity</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🔬</div>
+                    <h4>Sarah Patel</h4>
+                    <p>CTO<br>AI/ML Expert</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🛡️</div>
+                    <h4>Mike Rivera</h4>
+                    <p>CSO<br>20+ Years Experience</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">📊</div>
+                    <h4>Lena Wong</h4>
+                    <p>Head of Analytics</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Ready to Secure Your Future?</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px;">Join thousands of organizations protected by SecureGuard.</p>
+            <a href="/signup" class="btn btn-primary">Start Free Trial</a>
+            <!-- <a href="/demo" class="btn" style="background: transparent; color: #fff; border: 2px solid #00ff88;">Book Demo</a> -->
+        </section>
+    </div>
+</body>
+</html>
