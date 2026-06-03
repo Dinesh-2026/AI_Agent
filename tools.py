@@ -28,5 +28,4 @@ search_tool = Tool(
 api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=100)
 wiki_tool = WikipediaQueryRun(api_wrapper=api_wrapper)
 print("succesfully completed ")
-
-    
+print("tools.py loaded successfully")
