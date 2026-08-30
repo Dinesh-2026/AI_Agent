@@ -57,4 +57,4 @@ print(student_1.age)
 print(student_1.grade)
 print(isinstance(student_1,human))
 print(issubclass(student,human))
-this is the end of git - hun tutorial bye guys !!
+
